@@ -95,7 +95,7 @@ If `langgraph` is not installed, a 100-line `MiniGraph` with identical semantics
 
 ## 9. Evaluation (`app/evaluator/`)
 
-104 hand-written questions over the demo repo across 6 categories (20 per spec category + 4 test-generation targets), each with gold files, expected answer keywords, and (for review) expected finding categories. The runner executes the **live pipeline** per question and measures:
+56 hand-written questions over the demo repo across 6 categories, each with gold files, expected answer keywords, and (for review) expected finding categories. The runner executes the **live pipeline** per question and measures:
 
 * retrieval Recall@5/@10 (gold files in the retriever's top-k)
 * citation correctness (share of citations on gold files)

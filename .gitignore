@@ -12,9 +12,7 @@ node_modules/
 out/
 
 # Env & data
-# root .env only (no leading-slash would ALSO ignore the demo repo's deliberate
-# secret-scanner test fixture demo-repos/ecommerce-api/.env, which must be committed)
-/.env
+.env
 *.db
 
 # OS

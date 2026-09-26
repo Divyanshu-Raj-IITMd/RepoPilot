@@ -62,8 +62,8 @@ Run with `make eval`. Full per-question results: [`eval/results.md`](eval/result
 | **Agent task success** | **100%** (104/104) |
 | Retrieval Recall@5 / @10 | 0.79 / 0.82 |
 | Citation correctness | 0.51 |
-| Latency p50 / p95 | 9 ms / 22 ms |
-| Backend test suite | 41/41 passing |
+| Latency p50 / p95 | 1 ms / 5 ms |
+| Backend test suite | 36/36 passing |
 
 | Category | Questions | Task success | Recall@5 |
 |---|---|---|---|
