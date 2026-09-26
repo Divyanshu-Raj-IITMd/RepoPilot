@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-surface-950 text-slate-200 antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-700 rounded;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.codeblock {
+  @apply font-mono text-[12.5px] leading-relaxed bg-surface-950/80 rounded-lg border border-surface-700/60 p-3 overflow-x-auto whitespace-pre;
+}

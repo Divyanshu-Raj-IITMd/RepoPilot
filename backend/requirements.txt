@@ -1,0 +1,13 @@
+# Core (all free, no API keys needed)
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+httpx>=0.27
+numpy>=1.26
+langgraph>=0.2
+
+# --- optional upgrades (uncomment what you want) ---
+# sentence-transformers>=2.7   # neural embeddings (better semantic recall)
+# faiss-cpu>=1.8               # ANN vector search (numpy fallback is exact)
+# tree-sitter>=0.21            # + tree-sitter-javascript / tree-sitter-typescript
+# qdrant-client>=1.9           # alternative vector DB

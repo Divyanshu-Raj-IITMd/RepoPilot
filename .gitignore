@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+backend/.repopilot/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Env & data
+# root .env only (no leading-slash would ALSO ignore the demo repo's deliberate
+# secret-scanner test fixture demo-repos/ecommerce-api/.env, which must be committed)
+/.env
+*.db
+
+# OS
+.DS_Store

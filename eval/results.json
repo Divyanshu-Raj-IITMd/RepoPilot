@@ -1,0 +1,2881 @@
+{
+  "summary": {
+    "questions": 104,
+    "by_category": {
+      "architecture": {
+        "questions": 20,
+        "task_success": 1.0,
+        "recall@5": 0.5
+      },
+      "code_search": {
+        "questions": 20,
+        "task_success": 1.0,
+        "recall@5": 0.975
+      },
+      "dependency_tracing": {
+        "questions": 20,
+        "task_success": 1.0,
+        "recall@5": 0.767
+      },
+      "bug_investigation": {
+        "questions": 20,
+        "task_success": 1.0,
+        "recall@5": 0.95
+      },
+      "pr_review": {
+        "questions": 20,
+        "task_success": 1.0,
+        "recall@5": 0.55
+      },
+      "test_generation": {
+        "questions": 4,
+        "task_success": 1.0,
+        "recall@5": 1.0
+      }
+    },
+    "retrieval_recall@5": 0.792,
+    "retrieval_recall@10": 0.819,
+    "citation_correctness": 0.512,
+    "task_success_rate": 1.0,
+    "latency_ms_p50": 9.1,
+    "latency_ms_p95": 22.3,
+    "llm_provider": {
+      "provider": "heuristic",
+      "available": false,
+      "remote": false,
+      "model": null
+    },
+    "narration": "off \u2014 deterministic evaluation (LLM narration disabled)",
+    "repo": "ecommerce-api"
+  },
+  "rows": [
+    {
+      "id": "arch_01",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What is the architecture of this repository?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 576.7,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/main.py",
+        "app/repositories/__init__.py",
+        "app/repositories/db.py",
+        "app/services/products.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_02",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What framework does this project use?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.4,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/services/users.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_03",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What database does this project use?",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 0.0,
+      "latency_ms": 8.7,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        ".env",
+        "app/services/users.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_04",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "Describe the structure of this project.",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/routes/products.py",
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/services/products.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_05",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "How is this codebase organized?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.3,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/auth/jwt.py",
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "tests/test_jwt.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_06",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What is the main entry point of the application?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 11.9,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/main.py",
+        "app/utils/invoice.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_07",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What tech stack does this repo use?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_08",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "Where are the tests in this project?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.0,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "tests/test_jwt.py",
+        "tests/test_invoice.py",
+        "tests/__init__.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_09",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What are the main packages of this repository?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 7.9,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/main.py",
+        "app/utils/invoice.py",
+        "app/repositories/__init__.py",
+        "app/services/products.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_10",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "Give me an overview of this repository.",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 7.9,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/main.py",
+        "app/auth/jwt.py",
+        "app/repositories/__init__.py",
+        "app/services/products.py",
+        "app/services/users.py",
+        "app/repositories/db.py",
+        "app/auth/service.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_11",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What language is this project written in?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.9,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/services/products.py",
+        "app/models/models.py",
+        "app/main.py",
+        "app/routes/products.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_12",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "Where is the entry point of the service?",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 8.1,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/services/orders.py",
+        "app/services/products.py",
+        "app/services/users.py",
+        "README.md"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_13",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "Describe the project architecture for a new contributor.",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/auth/jwt.py",
+        "app/repositories/db.py",
+        "app/services/products.py",
+        "app/routes/products.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_14",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What are the main components of this codebase?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "README.md",
+        "app/utils/invoice.py",
+        "app/auth/jwt.py",
+        "app/middleware/auth.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_15",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "Explain the repository structure layer by layer.",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/repositories/db.py",
+        "app/main.py",
+        "app/services/products.py",
+        "app/repositories/__init__.py",
+        "app/routes/products.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_16",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "How many endpoints does this API expose?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.5,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/routes/orders.py",
+        "app/routes/users.py",
+        "app/routes/products.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_17",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What does this repository do?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/main.py",
+        "app/repositories/__init__.py",
+        "app/services/products.py",
+        "app/repositories/db.py",
+        "requirements.txt",
+        "app/services/orders.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_18",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "Where are the tests and what do they cover?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.0,
+      "latency_ms": 8.1,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "tests/test_invoice.py",
+        "tests/test_jwt.py",
+        "tests/__init__.py",
+        "app/services/orders.py",
+        "README.md",
+        "app/services/products.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_19",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What database does this service store its data in, and where is that configured?",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 0.0,
+      "latency_ms": 7.9,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/services/products.py",
+        "app/services/orders.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "arch_20",
+      "category": "architecture",
+      "task": "analyst",
+      "question": "What are the main modules of this project and what is each responsible for?",
+      "success": true,
+      "recall@5": null,
+      "recall@10": null,
+      "citation_correctness": null,
+      "latency_ms": 7.8,
+      "cited_files": [
+        "app/main.py",
+        "app/auth/__init__.py",
+        "app/routes/__init__.py",
+        "app/services/__init__.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/utils/invoice.py",
+        "app/main.py",
+        "README.md",
+        "app/models/models.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "analyst",
+      "route_ok": true
+    },
+    {
+      "id": "cs_01",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is JWT authentication implemented?",
+      "success": true,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "citation_correctness": 0.6666666666666666,
+      "latency_ms": 9.8,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/auth/jwt.py",
+        "app/middleware/auth.py"
+      ],
+      "retrieved_files": [
+        "app/auth/service.py",
+        "tests/test_jwt.py",
+        "app/auth/jwt.py",
+        "README.md",
+        "app/services/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_02",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where are tokens created?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 8.7,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "app/services/orders.py",
+        "app/auth/service.py",
+        "app/routes/products.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/auth/jwt.py",
+        "app/services/orders.py",
+        "tests/test_jwt.py",
+        "app/auth/service.py",
+        "app/routes/products.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_03",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the invoice calculation implemented?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 8.5,
+      "cited_files": [
+        "app/utils/invoice.py",
+        "app/services/orders.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "tests/test_invoice.py",
+        "app/utils/invoice.py",
+        "app/services/orders.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_04",
+      "category": "code_search",
+      "task": "search",
+      "question": "Which file handles the /api/users endpoint?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.5,
+      "latency_ms": 9.0,
+      "cited_files": [
+        "app/routes/users.py",
+        "app/models/models.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "app/models/models.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_05",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the data access layer?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 9.9,
+      "cited_files": [
+        "README.md",
+        "app/repositories/db.py",
+        ".env",
+        "app/auth/jwt.py",
+        "app/services/products.py"
+      ],
+      "retrieved_files": [
+        "README.md",
+        "app/repositories/db.py",
+        ".env",
+        "app/auth/jwt.py",
+        "app/services/products.py",
+        "app/services/orders.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_06",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is input validation implemented?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.14285714285714285,
+      "latency_ms": 12.7,
+      "cited_files": [
+        "app/utils/validators.py",
+        "README.md",
+        "app/services/products.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/utils/validators.py",
+        "README.md",
+        "app/services/products.py",
+        "app/services/orders.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_07",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where are orders created?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 12.2,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/models/models.py"
+      ],
+      "retrieved_files": [
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/models/models.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_08",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the middleware that checks bearer tokens?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 9.5,
+      "cited_files": [
+        "app/middleware/auth.py",
+        "README.md",
+        "app/middleware/__init__.py",
+        "app/main.py",
+        "app/auth/service.py"
+      ],
+      "retrieved_files": [
+        "app/middleware/auth.py",
+        "README.md",
+        "app/middleware/__init__.py",
+        "app/main.py",
+        "tests/test_jwt.py",
+        "app/auth/service.py",
+        "app/auth/jwt.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_09",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the password hash computed?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.25,
+      "latency_ms": 9.8,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/services/users.py",
+        "app/models/models.py",
+        "app/routes/users.py"
+      ],
+      "retrieved_files": [
+        "app/auth/service.py",
+        "app/services/users.py",
+        "app/models/models.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_10",
+      "category": "code_search",
+      "task": "search",
+      "question": "Which file defines the Product model?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 8.9,
+      "cited_files": [
+        "app/models/models.py",
+        "app/routes/products.py",
+        "app/services/products.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/routes/products.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_11",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where are new users created?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 8.8,
+      "cited_files": [
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/services/orders.py",
+        "app/models/models.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/models/models.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_12",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is token expiry checked?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 9.0,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "app/auth/service.py",
+        "app/utils/validators.py",
+        "app/middleware/auth.py",
+        "app/routes/products.py"
+      ],
+      "retrieved_files": [
+        "app/auth/jwt.py",
+        "tests/test_jwt.py",
+        "app/auth/service.py",
+        "app/utils/validators.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_13",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the products endpoint implemented?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 8.7,
+      "cited_files": [
+        "app/services/products.py",
+        "app/routes/products.py",
+        "app/models/models.py"
+      ],
+      "retrieved_files": [
+        "app/services/products.py",
+        "app/routes/products.py",
+        "app/models/models.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_14",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the secret key defined for signing tokens?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.25,
+      "latency_ms": 12.7,
+      "cited_files": [
+        "app/auth/jwt.py",
+        ".env",
+        "app/auth/service.py",
+        "app/routes/users.py"
+      ],
+      "retrieved_files": [
+        "app/auth/jwt.py",
+        ".env",
+        "tests/test_jwt.py",
+        "app/auth/service.py",
+        "README.md"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_15",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where are tokens decoded and verified?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 12.3,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "app/auth/service.py",
+        "app/utils/validators.py",
+        "app/middleware/auth.py",
+        "app/routes/products.py"
+      ],
+      "retrieved_files": [
+        "tests/test_jwt.py",
+        "app/auth/jwt.py",
+        "app/auth/service.py",
+        "app/utils/validators.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_16",
+      "category": "code_search",
+      "task": "search",
+      "question": "Which file implements the order cancellation endpoint?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 9.0,
+      "cited_files": [
+        "app/models/models.py",
+        "app/routes/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/routes/orders.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_17",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the login endpoint implemented?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 9.6,
+      "cited_files": [
+        "app/routes/users.py",
+        "README.md",
+        "app/main.py",
+        "app/services/orders.py",
+        "app/services/products.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "README.md",
+        "app/main.py",
+        "app/services/orders.py",
+        "app/services/products.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_18",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where are SQL queries executed against the database?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 14.5,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/repositories/db.py",
+        "README.md",
+        "app/services/products.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/services/orders.py",
+        "app/repositories/db.py",
+        "README.md",
+        "app/services/products.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_19",
+      "category": "code_search",
+      "task": "search",
+      "question": "Which file defines the Order dataclass?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 10.4,
+      "cited_files": [
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "cs_20",
+      "category": "code_search",
+      "task": "search",
+      "question": "Where is the Bearer token extracted from the request header?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 9.2,
+      "cited_files": [
+        "app/middleware/auth.py",
+        "app/auth/jwt.py",
+        "README.md",
+        "app/main.py",
+        "app/auth/service.py"
+      ],
+      "retrieved_files": [
+        "app/middleware/auth.py",
+        "app/auth/jwt.py",
+        "README.md",
+        "app/main.py",
+        "tests/test_jwt.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_01",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which files import app/services/users?",
+      "success": true,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "citation_correctness": 0.6,
+      "latency_ms": 9.2,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/routes/users.py",
+        "app/models/models.py",
+        "app/services/users.py",
+        "app/routes/users.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/services/users.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_02",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Who calls get_user_by_username?",
+      "success": true,
+      "recall@5": 0.6666666666666666,
+      "recall@10": 0.6666666666666666,
+      "citation_correctness": 0.8333333333333334,
+      "latency_ms": 9.2,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/auth/service.py",
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/models/models.py",
+        "app/services/users.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/routes/users.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_03",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "What does app/routes/orders.py depend on?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.5,
+      "latency_ms": 8.8,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/models/models.py",
+        "app/routes/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/routes/orders.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_04",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which files depend on app/repositories/db.py?",
+      "success": true,
+      "recall@5": 0.6666666666666666,
+      "recall@10": 0.6666666666666666,
+      "citation_correctness": 0.5714285714285714,
+      "latency_ms": 8.9,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/services/orders.py",
+        "app/services/products.py",
+        "app/services/users.py",
+        "app/repositories/db.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/repositories/db.py",
+        "app/repositories/__init__.py",
+        "app/services/orders.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_05",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Who uses calculate_invoice?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.6,
+      "latency_ms": 8.6,
+      "cited_files": [
+        "app/services/orders.py",
+        "tests/test_invoice.py",
+        "tests/test_invoice.py",
+        "app/utils/invoice.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "tests/test_invoice.py",
+        "app/utils/invoice.py",
+        "app/services/orders.py",
+        "README.md",
+        "app/routes/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_06",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which test file covers the invoice calculation?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.25,
+      "latency_ms": 8.9,
+      "cited_files": [
+        "app/utils/invoice.py",
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "tests/test_invoice.py"
+      ],
+      "retrieved_files": [
+        "tests/test_invoice.py",
+        "app/utils/invoice.py",
+        "tests/test_jwt.py",
+        "app/services/orders.py",
+        "tests/__init__.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_07",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "What does the middleware import?",
+      "success": true,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 9.5,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "app/middleware/__init__.py",
+        "app/middleware/auth.py",
+        "app/main.py",
+        "README.md",
+        "app/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/middleware/__init__.py",
+        "app/middleware/auth.py",
+        "app/main.py",
+        "README.md",
+        "app/auth/service.py",
+        "app/routes/users.py",
+        "app/__init__.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_08",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which files import app/utils/validators?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.25,
+      "latency_ms": 9.0,
+      "cited_files": [
+        "app/routes/products.py",
+        "app/utils/validators.py",
+        "app/utils/__init__.py",
+        "app/utils/invoice.py",
+        "app/routes/products.py",
+        "app/services/users.py"
+      ],
+      "retrieved_files": [
+        "app/utils/validators.py",
+        "app/utils/__init__.py",
+        "app/utils/invoice.py",
+        "app/routes/products.py",
+        "app/services/users.py",
+        "app/auth/service.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_09",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Who calls query_all?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.6,
+      "latency_ms": 9.6,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/services/products.py",
+        "app/services/users.py",
+        "app/repositories/db.py",
+        "app/routes/products.py"
+      ],
+      "retrieved_files": [
+        "app/repositories/db.py",
+        "app/services/products.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/main.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_10",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which files does app/main.py include?",
+      "success": true,
+      "recall@5": 0.3333333333333333,
+      "recall@10": 0.3333333333333333,
+      "citation_correctness": 0.375,
+      "latency_ms": 9.8,
+      "cited_files": [
+        "app/middleware/auth.py",
+        "app/routes/__init__.py",
+        "app/routes/orders.py",
+        "app/routes/products.py",
+        "app/routes/users.py",
+        "app/main.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/auth/jwt.py",
+        "app/services/users.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_11",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which files import app/repositories/db?",
+      "success": true,
+      "recall@5": 0.6666666666666666,
+      "recall@10": 0.6666666666666666,
+      "citation_correctness": 0.5714285714285714,
+      "latency_ms": 9.9,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/services/orders.py",
+        "app/services/products.py",
+        "app/services/users.py",
+        "app/repositories/db.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/repositories/db.py",
+        "app/repositories/__init__.py",
+        "app/services/users.py",
+        "app/services/orders.py",
+        "app/auth/service.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_12",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Who calls create_user?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 9.2,
+      "cited_files": [
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/models/models.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/models/models.py",
+        "app/middleware/auth.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_13",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "What does app/auth/service.py depend on?",
+      "success": true,
+      "recall@5": 0.5,
+      "recall@10": 1.0,
+      "citation_correctness": 0.42857142857142855,
+      "latency_ms": 10.0,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "app/repositories/db.py",
+        "app/services/users.py",
+        "app/auth/service.py",
+        "app/auth/__init__.py",
+        "app/services/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/auth/service.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/auth/__init__.py",
+        "app/services/__init__.py",
+        "app/auth/jwt.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_14",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which files depend on app/utils/invoice?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.375,
+      "latency_ms": 9.7,
+      "cited_files": [
+        "app/services/orders.py",
+        "tests/test_invoice.py",
+        "app/utils/invoice.py",
+        "app/utils/validators.py",
+        "app/utils/__init__.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/utils/invoice.py",
+        "app/utils/validators.py",
+        "app/utils/__init__.py",
+        "app/services/orders.py",
+        "tests/test_invoice.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_15",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Who calls decode_token?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.3333333333333333,
+      "latency_ms": 9.1,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/middleware/auth.py",
+        "tests/test_jwt.py",
+        "tests/test_jwt.py",
+        "app/auth/jwt.py",
+        "app/main.py"
+      ],
+      "retrieved_files": [
+        "tests/test_jwt.py",
+        "app/auth/service.py",
+        "app/auth/jwt.py",
+        "app/middleware/auth.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_16",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which test file covers the JWT token helpers?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 9.8,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "README.md",
+        "app/auth/service.py",
+        "app/middleware/auth.py",
+        "tests/test_jwt.py"
+      ],
+      "retrieved_files": [
+        "tests/test_jwt.py",
+        "app/auth/jwt.py",
+        "README.md",
+        "tests/test_invoice.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_17",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "What does app/routes/products.py depend on?",
+      "success": true,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "citation_correctness": 0.6,
+      "latency_ms": 9.8,
+      "cited_files": [
+        "app/services/products.py",
+        "app/utils/validators.py",
+        "app/models/models.py",
+        "app/routes/products.py",
+        "app/services/products.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/routes/products.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_18",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Who calls validate_price?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.5,
+      "latency_ms": 9.0,
+      "cited_files": [
+        "app/routes/products.py",
+        "app/utils/validators.py"
+      ],
+      "retrieved_files": [
+        "app/utils/validators.py",
+        "app/routes/products.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_19",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "Which files does app/services/orders.py import?",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 0.4,
+      "latency_ms": 10.1,
+      "cited_files": [
+        "app/repositories/db.py",
+        "app/utils/invoice.py",
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "dep_20",
+      "category": "dependency_tracing",
+      "task": "search",
+      "question": "What depends on app/repositories/db.py?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.42857142857142855,
+      "latency_ms": 9.8,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/services/orders.py",
+        "app/services/products.py",
+        "app/services/users.py",
+        "app/repositories/db.py",
+        "app/repositories/__init__.py"
+      ],
+      "retrieved_files": [
+        "app/repositories/db.py",
+        "app/repositories/__init__.py",
+        "app/services/orders.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "search",
+      "route_ok": true
+    },
+    {
+      "id": "bug_01",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might GET /api/users/{username} return HTTP 500?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.6,
+      "latency_ms": 22.3,
+      "cited_files": [
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/repositories/db.py",
+        "app/services/users.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "app/models/models.py",
+        "app/services/users.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_02",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why is there a SQL injection risk in list_orders?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.5,
+      "latency_ms": 12.5,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/services/orders.py",
+        "app/models/models.py"
+      ],
+      "retrieved_files": [
+        "app/services/orders.py",
+        "app/models/models.py",
+        "app/routes/orders.py",
+        "app/services/products.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_03",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why can calculate_invoice return a negative total?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.4,
+      "latency_ms": 11.5,
+      "cited_files": [
+        "app/utils/invoice.py",
+        "app/utils/invoice.py",
+        "app/services/orders.py",
+        "tests/test_invoice.py",
+        "tests/test_invoice.py"
+      ],
+      "retrieved_files": [
+        "app/utils/invoice.py",
+        "app/services/orders.py",
+        "tests/test_invoice.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_04",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might POST /api/products fail with an empty product name?",
+      "success": true,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "citation_correctness": 0.4,
+      "latency_ms": 12.6,
+      "cited_files": [
+        "app/routes/products.py",
+        "app/services/products.py",
+        "app/utils/validators.py",
+        "app/repositories/db.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/routes/products.py",
+        "app/models/models.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_05",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why is the hardcoded secret in jwt.py a security problem?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.6,
+      "latency_ms": 12.0,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "app/auth/jwt.py",
+        "app/auth/jwt.py",
+        "tests/test_jwt.py",
+        "app/main.py"
+      ],
+      "retrieved_files": [
+        "app/auth/jwt.py",
+        "tests/test_jwt.py",
+        "app/main.py",
+        "README.md",
+        "app/auth/service.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_06",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why does creating an order execute many queries in a loop?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.4,
+      "latency_ms": 12.8,
+      "cited_files": [
+        "app/models/models.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/orders.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_07",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might GET /api/products/{product_id} crash for a missing product?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.5,
+      "latency_ms": 11.3,
+      "cited_files": [
+        "app/routes/products.py",
+        "app/services/products.py",
+        "app/repositories/db.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/routes/products.py",
+        "app/models/models.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_08",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why is committing a .env file with AWS keys dangerous?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 14.5,
+      "cited_files": [
+        ".env",
+        "app/repositories/db.py",
+        "app/services/users.py",
+        "app/auth/jwt.py",
+        "app/services/products.py"
+      ],
+      "retrieved_files": [
+        ".env",
+        "app/repositories/db.py",
+        "app/services/users.py",
+        "app/auth/jwt.py",
+        "app/services/products.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_09",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might /api/users fail if the database is unavailable?",
+      "success": true,
+      "recall@5": 0.5,
+      "recall@10": 0.5,
+      "citation_correctness": 0.6,
+      "latency_ms": 11.6,
+      "cited_files": [
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/repositories/db.py",
+        "app/services/users.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "app/models/models.py",
+        "README.md",
+        "app/services/users.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_10",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why does the invoice test suite not cover failure paths?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.8,
+      "latency_ms": 10.7,
+      "cited_files": [
+        "tests/test_invoice.py",
+        "tests/test_invoice.py",
+        "README.md",
+        "tests/test_invoice.py",
+        "app/utils/invoice.py"
+      ],
+      "retrieved_files": [
+        "tests/test_invoice.py",
+        "README.md",
+        "app/utils/invoice.py",
+        "app/middleware/auth.py",
+        "app/services/orders.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_11",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why is list_orders vulnerable to SQL injection when a status filter is applied?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.5,
+      "latency_ms": 11.9,
+      "cited_files": [
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_12",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might POST /api/orders accept an order with a negative quantity?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 12.3,
+      "cited_files": [
+        "app/routes/orders.py",
+        "app/services/orders.py",
+        "app/repositories/db.py",
+        "app/utils/invoice.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/routes/orders.py",
+        "app/models/models.py",
+        "app/services/orders.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_13",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might POST /api/users accept a username with special characters?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.125,
+      "latency_ms": 12.7,
+      "cited_files": [
+        "app/routes/users.py",
+        "app/services/users.py",
+        "app/auth/service.py",
+        "app/repositories/db.py",
+        "app/services/users.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/routes/users.py",
+        "app/models/models.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_14",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why is SHA-256 a weak choice for password hashing in this codebase?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.4,
+      "latency_ms": 13.2,
+      "cited_files": [
+        "app/auth/service.py",
+        "app/services/users.py",
+        "app/services/users.py",
+        "app/auth/service.py",
+        "app/models/models.py"
+      ],
+      "retrieved_files": [
+        "app/auth/service.py",
+        "app/services/users.py",
+        "app/models/models.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_15",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why does get_order return None instead of raising an error for a missing order?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.5,
+      "latency_ms": 11.7,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/routes/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/models/models.py",
+        "app/auth/jwt.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_16",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why does create_order compute the order total twice?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.25,
+      "latency_ms": 12.0,
+      "cited_files": [
+        "app/models/models.py",
+        "app/routes/orders.py",
+        "app/routes/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/routes/orders.py",
+        "app/services/orders.py",
+        "app/repositories/db.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_17",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might cancel_order report success even when the order id does not exist?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.25,
+      "latency_ms": 12.2,
+      "cited_files": [
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py",
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/models/models.py",
+        "app/services/orders.py",
+        "app/routes/orders.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_18",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why can /health be accessed without a bearer token?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.0,
+      "latency_ms": 9.2,
+      "cited_files": [
+        "app/main.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "README.md",
+        "app/auth/service.py",
+        "tests/test_jwt.py",
+        "app/auth/jwt.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_19",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why might POST /api/products return HTTP 500 when the name field is missing?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 12.8,
+      "cited_files": [
+        "app/routes/products.py",
+        "app/services/products.py",
+        "app/utils/validators.py",
+        "app/repositories/db.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/routes/products.py",
+        "app/models/models.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "bug_20",
+      "category": "bug_investigation",
+      "task": "investigate",
+      "question": "Why is the database URL with an embedded password in .env a security risk?",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 0.2,
+      "latency_ms": 12.3,
+      "cited_files": [
+        ".env",
+        "app/auth/service.py",
+        "app/services/users.py",
+        "app/services/users.py",
+        "app/routes/users.py"
+      ],
+      "retrieved_files": [
+        ".env",
+        "app/auth/service.py",
+        "app/services/users.py",
+        "app/routes/users.py"
+      ],
+      "route_taken": "investigate",
+      "route_ok": true
+    },
+    {
+      "id": "rev_01",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.5,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "sql_injection"
+      ],
+      "expected_findings": [
+        "sql_injection"
+      ]
+    },
+    {
+      "id": "rev_02",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/services/users.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "swallowed_error"
+      ],
+      "expected_findings": [
+        "swallowed_error"
+      ]
+    },
+    {
+      "id": "rev_03",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.1,
+      "cited_files": [
+        "app/auth/jwt.py",
+        "app/auth/jwt.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "hardcoded_secret"
+      ],
+      "expected_findings": [
+        "hardcoded_secret"
+      ]
+    },
+    {
+      "id": "rev_04",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.4,
+      "cited_files": [
+        "app/utils/invoice.py",
+        "app/utils/invoice.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "mutable_default",
+        "todo"
+      ],
+      "expected_findings": [
+        "mutable_default",
+        "todo"
+      ]
+    },
+    {
+      "id": "rev_05",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/services/products.py",
+        "app/services/products.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "dangerous_call",
+        "missing_tests"
+      ],
+      "expected_findings": [
+        "dangerous_call"
+      ]
+    },
+    {
+      "id": "rev_06",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "missing_tests",
+        "n_plus_one"
+      ],
+      "expected_findings": [
+        "n_plus_one"
+      ]
+    },
+    {
+      "id": "rev_07",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.5,
+      "cited_files": [
+        "app/middleware/auth.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "removed_auth"
+      ],
+      "expected_findings": [
+        "removed_auth"
+      ]
+    },
+    {
+      "id": "rev_08",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.3,
+      "cited_files": [
+        "app/services/users.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "breaking_change",
+        "missing_tests"
+      ],
+      "expected_findings": [
+        "breaking_change"
+      ]
+    },
+    {
+      "id": "rev_09",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/utils/validators.py",
+        "app/utils/validators.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "missing_tests",
+        "style"
+      ],
+      "expected_findings": [
+        "style"
+      ]
+    },
+    {
+      "id": "rev_10",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/services/orders.py",
+        "app/services/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "missing_tests",
+        "sql_injection",
+        "swallowed_error"
+      ],
+      "expected_findings": [
+        "sql_injection",
+        "swallowed_error"
+      ]
+    },
+    {
+      "id": "rev_11",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.4,
+      "cited_files": [
+        "app/utils/validators.py",
+        "app/utils/validators.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "dangerous_call",
+        "missing_tests"
+      ],
+      "expected_findings": [
+        "dangerous_call"
+      ]
+    },
+    {
+      "id": "rev_12",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.2,
+      "cited_files": [
+        "app/services/users.py",
+        "app/services/users.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "dangerous_call",
+        "missing_tests"
+      ],
+      "expected_findings": [
+        "dangerous_call"
+      ]
+    },
+    {
+      "id": "rev_13",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/services/products.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "missing_tests",
+        "mutable_default"
+      ],
+      "expected_findings": [
+        "mutable_default"
+      ]
+    },
+    {
+      "id": "rev_14",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/routes/orders.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "swallowed_error"
+      ],
+      "expected_findings": [
+        "swallowed_error"
+      ]
+    },
+    {
+      "id": "rev_15",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.7,
+      "cited_files": [
+        "app/repositories/db.py",
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "hardcoded_secret"
+      ],
+      "expected_findings": [
+        "hardcoded_secret"
+      ]
+    },
+    {
+      "id": "rev_16",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.1,
+      "cited_files": [
+        "app/routes/products.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "todo"
+      ],
+      "expected_findings": [
+        "todo"
+      ]
+    },
+    {
+      "id": "rev_17",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.0,
+      "cited_files": [
+        "app/auth/service.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "removed_auth"
+      ],
+      "expected_findings": [
+        "removed_auth"
+      ]
+    },
+    {
+      "id": "rev_18",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.7,
+      "cited_files": [
+        "app/services/orders.py",
+        "app/services/orders.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "breaking_change",
+        "missing_tests",
+        "n_plus_one"
+      ],
+      "expected_findings": [
+        "breaking_change"
+      ]
+    },
+    {
+      "id": "rev_19",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.4,
+      "cited_files": [
+        "app/services/users.py",
+        "app/services/users.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "missing_tests",
+        "n_plus_one"
+      ],
+      "expected_findings": [
+        "n_plus_one"
+      ]
+    },
+    {
+      "id": "rev_20",
+      "category": "pr_review",
+      "task": "review",
+      "question": "Review this pull request",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 8.6,
+      "cited_files": [
+        "app/repositories/db.py"
+      ],
+      "retrieved_files": [
+        "app/main.py",
+        "app/middleware/auth.py",
+        "app/repositories/db.py",
+        "app/services/orders.py",
+        "app/services/users.py",
+        "app/services/products.py"
+      ],
+      "route_taken": "review",
+      "route_ok": true,
+      "detected_findings": [
+        "missing_tests"
+      ],
+      "expected_findings": [
+        "missing_tests"
+      ]
+    },
+    {
+      "id": "test_01",
+      "category": "test_generation",
+      "task": "testgen",
+      "question": "generate tests for calculate_invoice",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 3272.4,
+      "cited_files": [
+        "app/utils/invoice.py"
+      ],
+      "retrieved_files": [
+        "tests/test_invoice.py",
+        "app/utils/invoice.py",
+        "app/services/orders.py",
+        "README.md",
+        "tests/test_jwt.py"
+      ],
+      "route_taken": "testgen",
+      "route_ok": true,
+      "verification": "validated_after_fix",
+      "passed": 8,
+      "total": 8
+    },
+    {
+      "id": "test_02",
+      "category": "test_generation",
+      "task": "testgen",
+      "question": "generate tests for encode_token",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 1977.6,
+      "cited_files": [
+        "app/auth/jwt.py"
+      ],
+      "retrieved_files": [
+        "tests/test_jwt.py",
+        "app/auth/jwt.py",
+        "app/auth/service.py",
+        "README.md",
+        "tests/test_invoice.py"
+      ],
+      "route_taken": "testgen",
+      "route_ok": true,
+      "verification": "validated",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "id": "test_03",
+      "category": "test_generation",
+      "task": "testgen",
+      "question": "generate tests for decode_token",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 1893.2,
+      "cited_files": [
+        "app/auth/jwt.py"
+      ],
+      "retrieved_files": [
+        "tests/test_jwt.py",
+        "app/auth/service.py",
+        "app/auth/jwt.py",
+        "app/middleware/auth.py",
+        "README.md"
+      ],
+      "route_taken": "testgen",
+      "route_ok": true,
+      "verification": "validated",
+      "passed": 4,
+      "total": 4
+    },
+    {
+      "id": "test_04",
+      "category": "test_generation",
+      "task": "testgen",
+      "question": "generate tests for validate_quantity",
+      "success": true,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "citation_correctness": 1.0,
+      "latency_ms": 1462.6,
+      "cited_files": [
+        "app/utils/validators.py"
+      ],
+      "retrieved_files": [
+        "app/utils/validators.py",
+        "tests/test_invoice.py",
+        "app/utils/invoice.py",
+        "tests/test_jwt.py"
+      ],
+      "route_taken": "testgen",
+      "route_ok": true,
+      "verification": "validated",
+      "passed": 5,
+      "total": 5
+    }
+  ]
+}
