@@ -147,6 +147,15 @@ class DockerExecutor(BaseExecutor):
             raise RuntimeError("docker daemon not reachable (is Docker running?)")
 
     def run(self, command: list[str], workspace: str, timeout: int = 60) -> ExecResult:
+        # The host's interpreter path (e.g. /opt/hostedtoolcache/.../python)
+        # does not exist inside the container — commands built around
+        # sys.executable must run the container's python instead. Note that
+        # the stock python:3.11-slim image has no pytest; the verification
+        # loop reports a clear `no_tests_run` error rather than a false
+        # "validated" (use REPOPILOT_EXECUTOR=subprocess or a pytest-bearing
+        # image for test generation under Docker).
+        if command and command[0] == sys.executable:
+            command = ["python3", *command[1:]]
         docker_cmd = [
             "docker", "run", "--rm",
             "--network", "none",

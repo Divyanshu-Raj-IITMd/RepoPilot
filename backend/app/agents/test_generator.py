@@ -437,6 +437,15 @@ def generate_tests(repo, target: str, executor: BaseExecutor | None = None,
             })
             EventTap.emit("tool", agent="test_generator", tool="test_results",
                           iteration=it, passed=run.passed, failed=run.failed)
+            if run.passed + run.failed + run.errors == 0:
+                # pytest executed NOTHING (wrong interpreter / pytest missing
+                # inside a container sandbox). A zero-test run must NEVER be
+                # reported as "validated" — that is a silent false positive.
+                iterations[-1]["failure_classes"] = {"no_tests_run": [test_rel]}
+                status = "error"
+                EventTap.emit("tool", agent="test_generator", tool="test_results",
+                              iteration=it, passed=0, failed=0, error="no tests executed")
+                break
             if run.failed == 0 and run.errors == 0 and not run.timed_out:
                 status = "validated" if it == 1 else "validated_after_fix"
                 break
@@ -493,6 +502,7 @@ def module_import_path(file: str) -> str:
 
 
 def _verdict_text(status: str, passed: int, total: int, patch, iterations) -> str:
+    no_tests = any("no_tests_run" in (i.get("failure_classes") or {}) for i in iterations)
     head = {
         "validated": f"VERIFIED — {passed}/{total} generated tests passed on the first run.",
         "validated_after_fix": (
@@ -504,7 +514,11 @@ def _verdict_text(status: str, passed: int, total: int, patch, iterations) -> st
             "real defects in the implementation (see failure classes); the recommendation "
             "was NOT accepted."
         ),
-        "error": "Verification could not run (see iterations).",
+        "error": ("Verification could not execute any tests — the sandboxed pytest run "
+                  "produced no results (e.g. the container image lacks pytest, or the "
+                  "interpreter path does not exist inside the sandbox). "
+                  "Set REPOPILOT_EXECUTOR=subprocess or use a pytest-bearing image."
+                  if no_tests else "Verification could not run (see iterations)."),
     }[status]
     parts = [head]
     if patch:

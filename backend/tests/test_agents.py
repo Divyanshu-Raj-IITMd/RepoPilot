@@ -131,3 +131,26 @@ def test_generated_test_module_is_utf8(demo_repo, monkeypatch):
     _result, v = generate_tests(demo_repo, "calculate_invoice")
     assert v.status in ("validated", "validated_after_fix")
     assert v.total >= 6 and v.passed == v.total
+
+
+def test_zero_test_run_is_never_validated(demo_repo, monkeypatch):
+    """A sandboxed run that executes ZERO tests must not report 'validated'.
+
+    Caught by CI on GitHub's hosted runners: they have a live Docker daemon,
+    so auto mode selected the container sandbox whose stock image lacks
+    pytest — the empty run sailed through the old `failed == 0 and
+    errors == 0` acceptance check as a false VERIFIED verdict.
+    """
+    from app.agents import test_generator as tg
+    from app.verification.loop import TestRun
+
+    def fake_run_pytest(executor, workspace, test_rel, timeout):
+        return TestRun(passed=0, failed=0, errors=0, failed_tests=[],
+                       output="No module named pytest", exit_code=1)
+
+    monkeypatch.setattr(tg, "run_pytest", fake_run_pytest)
+    _result, v = tg.generate_tests(demo_repo, "calculate_invoice")
+    assert v.status == "error", "zero-test runs must be reported as errors"
+    assert v.passed == 0
+    assert "no_tests_run" in (v.iterations[0].get("failure_classes") or {})
+    assert "could not execute any tests" in v.summary

@@ -8,6 +8,12 @@ on:
 jobs:
   backend:
     runs-on: ubuntu-latest
+    env:
+      # Hosted runners have a live Docker daemon, so auto mode would pick the
+      # container sandbox — whose stock python:3.11-slim image lacks pytest.
+      # The subprocess sandbox (env whitelist + rlimits + timeout) is the
+      # documented CI mode.
+      REPOPILOT_EXECUTOR: subprocess
     defaults:
       run:
         working-directory: backend
